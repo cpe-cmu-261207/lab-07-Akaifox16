@@ -1,7 +1,6 @@
-import {useRouter} from 'next/router'
+import Link from 'next/link'
 
 const Gallery = () => {
-  const router = useRouter()
   const style = {
     backgroundColor: '#4CAF50',
     border: 'none',
@@ -14,17 +13,15 @@ const Gallery = () => {
     margin: '4px 2px',
     cursor: 'pointer',
   }
-  const route = (path) => {
-    router.push({pathname: path})
-  }
   return (
       <>
-        <table>
+        <table id ="Link">
             <tr >
-                <td><a onClick = {() => route('/')} style = {style}>Home</a></td>
-                <td><a onClick = {() => route('/gallery')} style = {style}>Gallery</a></td>
-                <td><a onClick = {() => route('/contact')} style = {style}>Contact</a></td>
-                <td><a onClick = {() => route('/gpa')} style = {style}>GPA Calc</a></td>
+                <td style= {style}><Link href="/">Home</Link></td>
+                <td style= {style}><Link href="/gallery">Gallery</Link></td>
+                <td style= {style}><Link href="/contact">Contact</Link></td>
+                <td style= {style}><Link href="/gpa">GPA calculator</Link></td>
+                <td style= {style}><Link href="/post">post</Link></td>
             </tr>
         </table>
         <table>
@@ -39,30 +36,30 @@ const Gallery = () => {
         <table >
             <tr>
                 <td><img src="photo/rice field.png" alt="pic1"/>
-                    <p>Eat rice , no bread</p>
+                    <p class = "description">Eat rice , no bread</p>
                 </td>
                 <td><img src="photo/stonk.jpg" alt="pic2"/>
-                    <p>S T O N K S</p>
+                    <p class = "description">S T O N K S</p>
                 </td>
                 <td><img src="photo/Thumnaz.png" alt="pic3"/>
-                    <p>mun kue pang!</p>
+                    <p class = "description">mun kue pang!</p>
                 </td>
                 <td><img src="photo/genius.jpg" alt="pic4"/>
-                    <p>G E N I U S !</p>
+                    <p class = "description">G E N I U S !</p>
                 </td>
             </tr>
             <tr>
                 <td><img src="photo/ei b0ss.jpg" alt="pic5"/>
-                <p>ei b0ss</p>
+                <p class = "description">ei b0ss</p>
                 </td>
                 <td><img src="photo/requiem.jpeg" alt="pic6"/>
-                <p>requiem da</p>
+                <p class = "description">requiem da</p>
                 </td>
                 <td><img src="photo/liar.jpg" alt="pic7"/>
-                <p>This is taste of a liar , Giorno Giorvana!</p>
+                <p class = "description">This is taste of a liar , Giorno Giorvana!</p>
                 </td>
                 <td><img src="photo/IC.jpg" alt="pic8"/>
-                <p>Oh! IC.</p>
+                <p class = "description">Oh! IC.</p>
                 </td>
             </tr>
         </table>

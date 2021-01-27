@@ -21,27 +21,39 @@ const Post = () => {
         }
     }
     useEffect(fetch,[postId])
-
+    const style = {
+        backgroundColor: '#4CAF50',
+        border: 'none',
+        color: 'white',
+        padding: '10px 10px',
+        textAlign: 'center',
+        textDecoration: 'none',
+        display: 'inline-block',
+        fontSize: '16px',
+        margin: '4px 2px',
+        cursor: 'pointer',
+      }
     return (
         <>
             <h1>display post data from api here</h1>
             {post !== null ? (
                 <div style={{padding:20}}>
                     <h2>Post : {post.text}</h2>
-                    <p>tags : {post.tags}</p>
+                    <p>tags : {[...post.tags].toString()
+                    }</p>
                     <img src = {post.image} alt = "fail to load"></img>
                     <p>{post.owner.firstname} {post.owner.lastname}</p>
                     <p>Likes : {post.likes}</p>
                     <h3>Comments</h3>
                     <ul>
                     {comment.map((comm) => {    
-                       return <li>{comm.owner.firstname} {comm.owner.lastname}: {comm.message}</li>
+                       return <li>{comm.owner.firstName} {comm.owner.lastName} : {comm.message}</li>
                     })}
                     </ul>
+                    <div  style = {style}  >
+                        <Link href="/post">Back</Link>
+                    </div>
                     
-                    <Link href="/post">
-                        Back
-                    </Link>
                 </div>
             ):null}
         </>

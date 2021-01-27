@@ -1,10 +1,9 @@
 import {useEffect} from 'react';
 import axios from 'axios'
-import {useRouter} from 'next/router'
+import Link from 'next/link'
 
 const baseURL = 'https://dummyapi.io/data/api'
 const Home = () => {
-  const router = useRouter()
   const style = {
     backgroundColor: '#4CAF50',
     border: 'none',
@@ -17,19 +16,16 @@ const Home = () => {
     margin: '4px 2px',
     cursor: 'pointer',
   }
-  const route = (path) => {
-    router.push({pathname: path})
-  }
 
   return (
-      <div>
-        <table>
+      <div >
+        <table id ="Link">
             <tr >
-                <td><a onClick = {() => route('/')} style = {style}>Home</a></td>
-                <td><a onClick = {() => route('/gallery')} style = {style}>Gallery</a></td>
-                <td><a onClick = {() => route('/contact')} style = {style}>Contact</a></td>
-                <td><a onClick = {() => route('/gpa')} style = {style}>GPA Calc</a></td>
-                <td><a onClick = {() => route('/post')} style = {style}>Post</a></td>
+                <td style= {style}><Link href="/">Home</Link></td>
+                <td style= {style}><Link href="/gallery">Gallery</Link></td>
+                <td style= {style}><Link href="/contact">Contact</Link></td>
+                <td style= {style}><Link href="/gpa">GPA calculator</Link></td>
+                <td style= {style}><Link href="/post">post</Link></td>
             </tr>
         </table>
         <table>

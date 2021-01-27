@@ -2,12 +2,11 @@ import { createContext, useEffect, useReducer , useState } from "react";
 import dynamic from 'next/dynamic'
 const CourseCard = dynamic(() => import('../components/CourseCard'))
 const CourseForm = dynamic(() => import('../components/CourseForm'))
-import {useRouter} from 'next/router'
+import Link from 'next/link'
 
 export const CardContext = createContext({});
 
 function App() {
-  const router = useRouter()  
   const [GPA, setGPA] = useState(0.00);
   function calculateGPA() {
     // TODO
@@ -74,25 +73,23 @@ function App() {
     margin: '4px 2px',
     cursor: 'pointer',
   }
-  const route = (path) => {
-    router.push({pathname: path})
-  }
   return (
     <CardContext.Provider value = {{state,dispatch}}>
       <div>
-      <table>
-            <tr >
-                <td><a onClick = {() => route('/')} style = {style}>Home</a></td>
-                <td><a onClick = {() => route('/gallery')} style = {style}>Gallery</a></td>
-                <td><a onClick = {() => route('/contact')} style = {style}>Contact</a></td>
-                <td><a onClick = {() => route('/gpa')} style = {style}>GPA Calc</a></td>
+      <table id ="Link">
+            <tr>
+                <td style= {style}><Link href="/">Home</Link></td>
+                <td style= {style}><Link href="/gallery">Gallery</Link></td>
+                <td style= {style}><Link href="/contact">Contact</Link></td>
+                <td style= {style}><Link href="/gpa">GPA calculator</Link></td>
+                <td style= {style}><Link href="/post">post</Link></td>
             </tr>
         </table>
         <h1>GPA CALCULATOR</h1>
         <CourseCard state={state.currentState} />
       </div>
       <CourseForm />
-      <p>{GPA.toFixed(2)}</p>
+      <h2>{GPA.toFixed(2)}</h2>
     </CardContext.Provider>
   );
 }
