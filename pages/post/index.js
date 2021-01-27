@@ -40,14 +40,16 @@ const Posts = () => {
             <ul>
             {posts.map(post => {
                 console.log(post)
-                return <Link  key={post.id} href={`/post/${post.id}`}>
-                <li>
-                    <p>post : {post.text}</p>
-                    <img src = {post.image} alt = "fail to load"></img>
-                    <p>Likes : {post.likes}</p>
-                    <button style={{margin:10}}>Go to this post</button>
-                </li>
-            </Link>
+                return (
+                    <li>
+                        <h3>post : {post.text}</h3>
+                        <img src = {post.image} alt = "fail to load"/>
+                        <p>Likes : {post.likes}</p>
+                        <Link  key={post.id} href={`/post/${post.id}`}>
+                            <button style={{margin:10}}>Go to this post</button>
+                        </Link>
+                    </li>
+                ) 
             })}
             </ul>
         </>

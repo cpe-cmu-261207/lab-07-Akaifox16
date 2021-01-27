@@ -85,11 +85,11 @@ function App() {
                 <td style= {style}><Link href="/post">post</Link></td>
             </tr>
         </table>
-        <h1>GPA CALCULATOR</h1>
+        <h1 class = "title">GPA CALCULATOR</h1>
         <CourseCard state={state.currentState} />
       </div>
       <CourseForm />
-      <h2>{GPA.toFixed(2)}</h2>
+      <h2>GPA : {GPA.toFixed(2)}</h2>
     </CardContext.Provider>
   );
 }

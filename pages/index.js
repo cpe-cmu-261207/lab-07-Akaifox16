@@ -29,25 +29,25 @@ const Home = () => {
             </tr>
         </table>
         <table>
-            <tr >
+            <tr class = "name-tag">
                 <td><h1>Kamonpat Sunthonpong</h1>
                     <h2>Student</h2>
                     <h2>kamonpat_s@cmu.ac.th</h2></td>
-                <td><img src="photo/so yummy.png" alt="this is me ,so yummy ."/></td>
+                <td><img class = "profile" src="photo/so yummy.png" alt="this is me ,so yummy ."/></td>
             </tr>
         </table>
-        <h1 >Home</h1>        
+        <h1  class = "title">Home</h1>        
         <table>
             <tr>
                 <td>
-                    <h2 >About me</h2>
+                    <h2 class = "sub-title">About me</h2>
                     <p >I am sophomore student in Department of Computer Engineering at Chiang Mai university.</p>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <h2 >Skills</h2>
-                    <table >
+                    <h2 class = "sub-title" >Skills</h2>
+                    <table class = "skill" >
                         <tr >
                             <td >c++ lv6</td>
                             <td >java lv6</td>
@@ -63,7 +63,7 @@ const Home = () => {
             </tr>
             <tr>
                 <td>
-                    <h2 >Hobby</h2>
+                    <h2 class = "sub-title" >Hobby</h2>
                     <table >
                         <tr>
                             <td ></td>

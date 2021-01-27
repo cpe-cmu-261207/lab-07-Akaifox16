@@ -35,12 +35,10 @@ const Post = () => {
       }
     return (
         <>
-            <h1>display post data from api here</h1>
             {post !== null ? (
                 <div style={{padding:20}}>
-                    <h2>Post : {post.text}</h2>
-                    <p>tags : {[...post.tags].toString()
-                    }</p>
+                    <h1>Post : {post.text}</h1>
+                    <h2>tags : {[...post.tags].toString()}</h2>
                     <img src = {post.image} alt = "fail to load"></img>
                     <p>{post.owner.firstname} {post.owner.lastname}</p>
                     <p>Likes : {post.likes}</p>

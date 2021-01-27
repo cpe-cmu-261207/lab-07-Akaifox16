@@ -25,50 +25,52 @@ const Contact = () => {
             </tr>
         </table>
         <table>
-            <tr >
+            <tr class = "name-tag">
                 <td><h1>Kamonpat Sunthonpong</h1>
                     <h2>Student</h2>
                     <h2>kamonpat_s@cmu.ac.th</h2></td>
-                <td><img src="photo/so yummy.png" alt="this is me ,so yummy ."/></td>
+                <td><img class = "profile" src="photo/so yummy.png" alt="this is me ,so yummy ."/></td>
             </tr>
         </table>
-        <h1 >Contact</h1>
+        <h1 class = "title">Contact</h1>
         <form action="">
-            <table border="1px" >
-                <tr >
-                    <td><h4>Subject:</h4></td>
-                    <td><input type="text" size="60px" /></td>
-                </tr>
-                <tr >
-                    <td><h4>Massage:</h4></td>
-                    <td><textarea name="message" id="massage" cols="30" rows="10" ></textarea></td>
-                </tr>
-                <tr >
-                    <td><h4>Name:</h4></td>
-                    <td><input type="text" size="60px"/></td>
-                </tr>
-                <tr>
-                    <td><h4>Gender:</h4></td>
-                    <td>
-                        <form>
-                            <input type="radio" name="gender"/>male
-                            <input type="radio" name="gender"/>female
-                            <input type="radio" name="gender"/>others
-                        </form></td>
-                </tr>
-                <tr >
-                    <td><h4>Phone:</h4></td>
-                    <td><input type="text" size="60px"/></td>
-                </tr>
-                <tr >
-                    <td><h4>Email:</h4></td>
-                    <td><input type="text" size="60px"/></td>
-                </tr>
-                <tr >
-                    <td></td>
-                    <td><button type="submit" id="submit">submit</button></td>
-                </tr>
-            </table>
+            <div>
+                <table border="1px" class = "main-table" >
+                    <tr >
+                        <td><h4>Subject:</h4></td>
+                        <td><input type="text" size="60px" /></td>
+                    </tr>
+                    <tr >
+                        <td><h4>Massage:</h4></td>
+                        <td><textarea name="message" id="massage" cols="30" rows="10" ></textarea></td>
+                    </tr>
+                    <tr >
+                        <td><h4>Name:</h4></td>
+                        <td><input type="text" size="60px"/></td>
+                    </tr>
+                    <tr>
+                        <td><h4>Gender:</h4></td>
+                        <td>
+                            <form>
+                                <input type="radio" name="gender"/>male
+                                <input type="radio" name="gender"/>female
+                                <input type="radio" name="gender"/>others
+                            </form></td>
+                    </tr>
+                    <tr >
+                        <td><h4>Phone:</h4></td>
+                        <td><input type="text" size="60px"/></td>
+                    </tr>
+                    <tr >
+                        <td><h4>Email:</h4></td>
+                        <td><input type="text" size="60px"/></td>
+                    </tr>
+                    <tr >
+                        <td></td>
+                        <td><button type="submit" id="submit">submit</button></td>
+                    </tr>
+                </table>
+            </div>
         </form>
       </>
   )
