@@ -40,7 +40,7 @@ const Post = () => {
                     <h1>Post : {post.text}</h1>
                     <h2>tags : {[...post.tags].toString()}</h2>
                     <img src = {post.image} alt = "fail to load"></img>
-                    <p>{post.owner.firstname} {post.owner.lastname}</p>
+                    <p>{post.owner.firstName} {post.owner.lastName}</p>
                     <p>Likes : {post.likes}</p>
                     <h3>Comments</h3>
                     <ul>
